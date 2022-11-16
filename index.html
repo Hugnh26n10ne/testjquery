@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet/less" type="css/text" href="css/style.less">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Mua hàng</title>
+</head>
+
+<body>
+    <div>
+        <h1>Chọn bạn để bán </h1>
+    </div>
+    <div>
+        <!-- thầy giáo ba -->
+        <input type="radio" value="Ba" id="ba-person" name="person">
+        <label for="ba-person" id="ba-text">Thầy giáo Ba</label>
+        <!-- thầy giáo quang -->
+        <input type="radio" value="Quang" id="quang-person" name="person">
+        <label for="quang-person" id="quang-text">Thầy giáo Quang</label>
+        <!-- thầy giáo dũng -->
+        <input type="radio" value="Dũng" id="dung-person" name="person">
+        <label for="dung-person" id="dung-text">Thầy giáo Dũng</label>
+        <!-- hiển thị thằng được chọn -->
+        <p id="show" aria-hidden="true"> </p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#ba-person').click(function () {
+                $('#ba-text').toggle('slow', function () {
+                    //     // alert('Đã Bán: '+$('#ba-text').text());
+                    $('#show').show("slow", function(){
+                        $('#show').html("<b>Đã bán thầy giáo ba</b>");
+                        
+                    });
+                });
+
+            });
+            $('#quang-person').click(function () {
+                // $('#quang-text').hide('slow',function(){
+                //     // alert('Đã Bán: '+$('#quang-text').text());
+
+                // });
+            });
+            $('#dung-person').click(function () {
+                // $('#dung-text').hide('slow',function(){
+                //     // alert('Đã Bán: '+$('#dung-text').text());
+
+                // });
+            });
+        });
+    </script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
